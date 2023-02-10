@@ -31,5 +31,5 @@ dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux 
 # STEP 3: To set the WSL default version to 2.
 wsl --set-default-version 2
 
-#STEP 4: Install Distro
+# STEP 4: Install Distro
 wsl --install -d kali-linux

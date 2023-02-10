@@ -1,8 +1,6 @@
 # WSL2-Powershell-Script
 
 #This can be used to deploy WSL2 via Terraform
-
-# Virtual Machine Extension to Install IIS
 resource "azurerm_virtual_machine_extension" "software" {
   name                 = "install-software"
   resource_group_name  = azurerm_resource_group.azrg.name

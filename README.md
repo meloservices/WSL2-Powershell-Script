@@ -28,10 +28,8 @@ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /nores
 # STEP 2: Enable WSL feature
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 
-# STEP 3: Restart Win 10 Machine
-
-# STEP 4: To set the WSL default version to 2.
-# Any distribution installed after this, would run on WSL 2
+# STEP 3: To set the WSL default version to 2.
 wsl --set-default-version 2
-#STEP 5: Install Distro
+
+#STEP 4: Install Distro
 wsl --install -d kali-linux

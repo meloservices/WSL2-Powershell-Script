@@ -1,3 +1,4 @@
+
 #Write-Host "Delete any existing WinRM listeners"
 winrm delete winrm/config/listener?Address=*+Transport=HTTP  2>$Null
 winrm delete winrm/config/listener?Address=*+Transport=HTTPS 2>$Null
@@ -44,7 +45,15 @@ Add-AppxPackage .\kali.appx
 # Any distribution installed after this, would run on WSL 2
 wsl --set-default-version 2
 
-# STEP 4:
+wsl.exe -e sudo apt update
+
+# STEP 6:
 #wsl --install -d kali-linux
+
+
+
+
+
+
 
 

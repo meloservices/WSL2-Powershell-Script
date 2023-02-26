@@ -1,3 +1,4 @@
+
 locals {
   wsl-location       = "eastus"
   wsl-resource-group = "azure-wsl-vnet-rg"
@@ -106,7 +107,7 @@ resource "azurerm_windows_virtual_machine" "windows-vm" {
   #variables
    custom_data = "${filebase64("C:/Users/dufre/Desktop/windows-vm/script.ps1")}"
    winrm_listener {
-	protocol = "Http"
+	 protocol = "Http"
 	}
 
   computer_name  = "windows-vm"
@@ -123,8 +124,6 @@ resource "azurerm_windows_virtual_machine" "windows-vm" {
     sku       = "2019-Datacenter"
     version   = "latest"
   }
-
-
 
   additional_unattend_content {
       setting      = "AutoLogon"
@@ -149,8 +148,6 @@ resource "azurerm_windows_virtual_machine" "windows-vm" {
         port = 5985
         https = false
         timeout = "4m"
-	agent = false
-	insecure = true
         user    = var.username
         password = var.password
     }
